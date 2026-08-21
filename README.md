@@ -8,6 +8,16 @@ the residual addition), evaluated as an iso-parametric control condition.
 - **Eq. 1** (proposed): X̂ = X + SE(F(X)) — SE gates the residual branch before the identity add
 - **Eq. 2**: s = σ(W₂·δ(W₁·GAP(X))), X̂ = X·s — squeeze-excite gating, reduction ratio r=16
 
+## Paper
+
+Published open access in *Array* 31 (2026) 101163 (Elsevier), under CC BY 4.0 license.
+
+📄 [Read the paper (PDF)](paper/ressenet_fer_array_2026.pdf)
+🔗 DOI: [10.1016/j.array.2026.101163](https://doi.org/10.1016/j.array.2026.101163)
+
+If you use this code, please cite:
+> Raju, A. P., Sudhakar, K., & Rubini, P. (2026). Investigating squeeze-and-excitation placement in residual networks for facial emotion recognition. *Array*, 31, 101163. https://doi.org/10.1016/j.array.2026.101163
+
 ## What this reproduces
 
 - **Table I** — comparative evaluation: BaselineCNN, ResNet-18, VGGNet-13, SE-ResNet
