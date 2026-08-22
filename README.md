@@ -65,7 +65,7 @@ and the ablation study depend on.
 ## Setup
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/ressenet-fer.git
+git clone https://github.com/Amruthamsha/ressenet-fer.git
 cd ressenet-fer
 pip install -r requirements.txt
 ```
