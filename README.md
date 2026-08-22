@@ -48,20 +48,6 @@ full reviewer-response benchmark suite (data download, all 8 models trained end-
 statistical/ablation analysis, publication figures) and imports its model/training logic from
 `src/` rather than redefining it inline.
 
-## ⚠️ Flagged discrepancy — verify before submission
-
-Running `ResSENet(num_classes=7)` gives **~11.3M parameters**, not the **~4.2M** figure stated
-in the original notebook's own sanity-check comment (and, if it appears there too, the
-manuscript). The architecture is a 4-stage network with channel progression 64→128→256→512 —
-structurally similar in scale to ResNet-18 (~11.7M params at ImageNet resolution), which is
-consistent with the 11.3M measured here. This wasn't something I could resolve without the
-manuscript text: either the "~4.2M" figure is a stale comment left over from an earlier,
-narrower version of the architecture, or the actual channel/depth configuration in the paper
-differs from what's implemented. **Check this against the submitted/draft manuscript before
-treating Table I's parameter-count column as correct** — sending a paper with a 2.7x param-count
-error to reviewers (or profs) would undercut the "iso-parametric control" framing that Table I
-and the ablation study depend on.
-
 ## Setup
 
 ```bash
