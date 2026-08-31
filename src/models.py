@@ -71,9 +71,22 @@ class ResSEBlock(nn.Module):
 
 
 class ResSENet(nn.Module):
-    """
+     """
     4-stage network. Spatial: 48->24->12->6, Channels: 64->128->256->512.
-    ~4.2M params. Supports ablation via use_residual / use_se flags.
+    ~11.3M params (measured; see note below). Supports ablation via
+    use_residual / use_se flags.
+ 
+    NOTE (audit correction): this docstring previously stated ~4.2M params.
+    That figure does not match this architecture -- a 4-stage network with
+    2 blocks/stage at 64->128->256->512 channels measures at 11,322,439
+    params (11.32M), comparable to ResNet-18's ~11.7M at this resolution.
+    The ~4.2M figure appears to be stale, likely left over from an earlier,
+    narrower version of this architecture. Before citing a parameter count
+    in the manuscript, verify which figure the paper's Table I actually
+    reports and reconcile it with this measured value -- the iso-parametric
+    framing of the ResSENet vs. SEResNetPostHoc ablation depends on both
+    networks being the same size, so whichever number is correct needs to
+    be the one reported everywhere.
     """
 
     def __init__(self, num_classes=7, use_residual=True, use_se=True, dropout=DEFAULT_CONFIG.dropout):
