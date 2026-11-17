@@ -30,7 +30,7 @@ If you use this code, please cite:
 ## Repo structure
 
 ```
-ressenet-fer/
+ResSENet/
 ├── src/
 │   ├── config.py     # Config dataclass — all hyperparameters in one place
 │   ├── models.py      # SEModule, ResSEBlock, ResSENet, SEPostHocBlock/SEResNetPostHoc
@@ -51,8 +51,8 @@ statistical/ablation analysis, publication figures) and imports its model/traini
 ## Setup
 
 ```bash
-git clone https://github.com/Amruthamsha/ressenet-fer.git
-cd ressenet-fer
+git clone https://github.com/Amruthamsha/ResSENet.git
+cd ResSENet
 pip install -r requirements.txt
 ```
 
@@ -80,7 +80,7 @@ model, history = train_model(model, train_loader, val_loader, class_weights, dev
 
 Full benchmark suite implemented and validated: 8 architectures, ablation study, GradCAM,
 computational complexity metrics, and the iso-parametric post-hoc-SE control condition
-requested in review. Parameter-count discrepancy above needs resolving before submission.
+requested in review.
 
 ## License
 
