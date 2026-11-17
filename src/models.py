@@ -73,7 +73,8 @@ class ResSEBlock(nn.Module):
 class ResSENet(nn.Module):
      """
     4-stage network. Spatial: 48->24->12->6, Channels: 64->128->256->512.
-    ~11.3M params (measured; see note below). Supports ablation via
+    About 11.3M parameters (11,322,439), as reported in Table I of the paper,
+    identical to the post-hoc SE-ResNet control. Supports ablation via the
     use_residual / use_se flags.
  
     NOTE (audit correction): this docstring previously stated ~4.2M params.
